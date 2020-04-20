@@ -1,0 +1,56 @@
+### Features
+
+* It has most of the features available on Trello, like creating and editing new cards, dragging around cards and so on.
+* Supports GitHub flavored markdown, which enables stuff like headings and checklists on the cards.
+* Works great on touch devices.
+
+### Tech stack
+
+* [React](https://github.com/facebook/react)
+* [Redux](https://github.com/reactjs/redux)
+* [React-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
+* [Sass](https://github.com/sass/sass)
+* [Webpack](https://github.com/webpack/webpack)
+* [Babel](https://github.com/babel/babel)
+* [Express](https://github.com/expressjs/express)
+* [MongoDB](https://github.com/mongodb/mongo)
+* [Passport](https://github.com/jaredhanson/passport)
+
+#### Simplified setup
+
+npm install
+
+npm run build
+
+# Open a second terminal window and run:
+npm run serve
+```
+
+The app will run on http://127.0.0.1:1337
+
+You need to add your own mongoDB url as well as auth credentials for the Google and Twitter sign in. You need to create a file with the name `.env` in the root directory with the following variables:
+
+```
+MONGODB_URL
+MONGODB_NAME
+TWITTER_API_KEY
+TWITTER_API_SECRET
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+SESSION_SECRET
+
+# Has to be port 1337
+ROOT_URL=http://127.0.0.1:1337
+```
+
+```shell
+npm run build
+npm run serve
+```
+
+For production deployment run:
+
+```shell
+npm run build:prod
+npm run serve:prod
+```
